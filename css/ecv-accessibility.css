@@ -1,0 +1,31 @@
+@import url(./font.css);
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "robotoRegular";
+}
+
+.myAriaLabel[aria-label] {
+    position: relative;
+}
+    
+.myAriaLabel[aria-label]::after {
+    content: attr(aria-label);
+    display: none;
+    position: absolute;
+    top: 4%;
+    left: 30px;
+    z-index: 5000;
+    pointer-events: auto;
+    padding: 19px 20px;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #000;
+    height: auto;
+}
+    
+.myAriaLabel[aria-label]:hover::after {
+    display: block;
+}
